@@ -9,6 +9,7 @@ import dev.abhishekt.reviewservice.repositories.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -27,6 +28,7 @@ public class ReviewService {
         ResponseEntity<Review> response = new ResponseEntity<>(savedReview, HttpStatus.CREATED);
         return response;
     }
+    @Transactional
     public ResponseEntity<Review> likeReview(String userId, String reviewId) throws NotFoundException {
         Optional<Review> reviewOptional = reviewRepository.findById(UUID.fromString(reviewId));
         Optional<User> userOptional = userRepository.findById(UUID.fromString(userId));
@@ -47,7 +49,7 @@ public class ReviewService {
         ResponseEntity<Review> response = new ResponseEntity<>(review,HttpStatus.OK);
         return response;
     }
-
+    @Transactional
     public ResponseEntity<Review> dislikeReview(String userId,String reviewId) throws NotFoundException {
         Optional<Review> reviewOptional = reviewRepository.findById(UUID.fromString(reviewId));
         Optional<User> userOptional = userRepository.findById(UUID.fromString(userId));
