@@ -5,7 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ReviewDTO {
-    private String reviewId;
-    private String userId;
+public class DeleteReviewDTO {
+    private String id;//reviewId
 }
