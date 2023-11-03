@@ -1,0 +1,49 @@
+{
+  "classname" : "org.springframework.data.repository.CrudRepository",
+  "storedCandidateMap" : { },
+  "declaredMockMap" : {
+    "org.springframework.data.repository.CrudRepository#findById#(Ljava/lang/Object;)Ljava/util/Optional;" : [ {
+      "id" : "4fe5de8b-283c-4d25-a6d5-9a2852f1be81",
+      "name" : "mock response reviewRepository.findById",
+      "fieldTypeName" : "org.springframework.data.repository.CrudRepository",
+      "sourceClassName" : "dev.abhishekt.reviewservice.services.ReviewService",
+      "fieldName" : "reviewRepository",
+      "methodName" : "findById",
+      "whenParameter" : [ {
+        "name" : "id",
+        "type" : "NULL",
+        "value" : "java.util.UUID"
+      } ],
+      "thenParameter" : [ {
+        "returnParameter" : {
+          "declaredMocks" : [ ],
+          "value" : "{\"comment\": \"string\", \"createdAt\": 1699016383119, \"updatedAt\": 1699016383119, \"user\": {}, \"service\": {}, \"rating\": {}, \"likes\": [{}], \"dislikes\": [{}], \"uuid\": \"530ea631-60e6-4c89-8f38-6954a117859d\"}",
+          "returnValueType" : "REAL",
+          "className" : "java.util.Optional<dev.abhishekt.reviewservice.models.Review>"
+        },
+        "methodExitType" : "EXCEPTION"
+      } ]
+    }, {
+      "id" : "eab5999b-c7ce-44a7-8bfd-e0f5e90a91cc",
+      "name" : "mock response reviewRepository.findById",
+      "fieldTypeName" : "org.springframework.data.repository.CrudRepository",
+      "sourceClassName" : "dev.abhishekt.reviewservice.services.ReviewService",
+      "fieldName" : "reviewRepository",
+      "methodName" : "findById",
+      "whenParameter" : [ {
+        "name" : "id",
+        "type" : "ANY_OF_TYPE",
+        "value" : "java.util.UUID"
+      } ],
+      "thenParameter" : [ {
+        "returnParameter" : {
+          "declaredMocks" : [ ],
+          "value" : "{\"comment\": \"string\", \"createdAt\": 1699016436122, \"updatedAt\": 1699016436122, \"user\": {}, \"service\": {}, \"rating\": {}, \"likes\": [{}], \"dislikes\": [{}], \"uuid\": \"5c15fef3-b707-476e-a197-3c7359cd0da4\"}",
+          "returnValueType" : "REAL",
+          "className" : "java.util.Optional<dev.abhishekt.reviewservice.models.Review>"
+        },
+        "methodExitType" : "NORMAL"
+      } ]
+    } ]
+  }
+}

@@ -7,4 +7,7 @@ import lombok.Setter;
 @Setter
 public class DeleteReviewDTO {
     private String id;//reviewId
+
+    public DeleteReviewDTO(String reviewId) {
+    }
 }

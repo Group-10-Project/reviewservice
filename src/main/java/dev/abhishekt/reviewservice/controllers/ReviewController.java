@@ -47,4 +47,7 @@ public class ReviewController {
     public List<Review> getReviewsForService(@RequestBody Service service){
         return null;
     }
+
+    public void setReviewService(ReviewService reviewService) {
+    }
 }

@@ -8,4 +8,7 @@ import lombok.Setter;
 public class ReviewDTO {
     private String reviewId;
     private String userId;
+
+    public ReviewDTO(String userId, String reviewId) {
+    }
 }

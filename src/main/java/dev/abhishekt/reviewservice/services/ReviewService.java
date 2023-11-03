@@ -23,6 +23,11 @@ public class ReviewService {
         this.reviewRepository = reviewRepository;
         this.userRepository = userRepository;
     }
+
+    public ReviewService() {
+
+    }
+
     public ResponseEntity<Review> createReview(Review review){
         Review savedReview = reviewRepository.save(review);
         ResponseEntity<Review> response = new ResponseEntity<>(savedReview, HttpStatus.CREATED);
@@ -100,4 +105,11 @@ public class ReviewService {
     public List<Review> getReviewsForService(dev.abhishekt.reviewservice.models.Service service){
         return reviewRepository.findByService(service);
     }
+
+    public void setReviewRepository(ReviewRepository reviewRepository) {
+    }
+
+    public void setUserRepository(UserRepository userRepository) {
+    }
+
 }
