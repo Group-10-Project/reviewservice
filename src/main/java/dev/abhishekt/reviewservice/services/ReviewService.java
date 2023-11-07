@@ -6,6 +6,7 @@ import dev.abhishekt.reviewservice.models.User;
 import dev.abhishekt.reviewservice.repositories.ReviewRepository;
 import dev.abhishekt.reviewservice.repositories.UserRepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,9 @@ import java.util.UUID;
 
 @Service
 public class ReviewService {
+    @Autowired
     private ReviewRepository reviewRepository;
+    @Autowired
     private UserRepository userRepository;
     public ReviewService(ReviewRepository reviewRepository,UserRepository userRepository){
         this.reviewRepository = reviewRepository;
