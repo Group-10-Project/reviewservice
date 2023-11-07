@@ -45,7 +45,7 @@ public class ReviewController {
     }
     @GetMapping("/service")
     public List<Review> getReviewsForService(@RequestBody Service service){
-        return null;
+        return reviewService.getReviewsForService(service);
     }
 
     public void setReviewService(ReviewService reviewService) {
