@@ -19,11 +19,11 @@ public class Review extends BaseModel{
     private Date createdAt;
     @UpdateTimestamp
     private Date updatedAt;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Service service;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Rating rating;
     @ManyToMany
     @JoinTable(

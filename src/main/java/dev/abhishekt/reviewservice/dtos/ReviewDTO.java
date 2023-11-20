@@ -10,5 +10,7 @@ public class ReviewDTO {
     private String userId;
 
     public ReviewDTO(String userId, String reviewId) {
+        this.reviewId=reviewId;
+        this.userId=userId;
     }
 }
