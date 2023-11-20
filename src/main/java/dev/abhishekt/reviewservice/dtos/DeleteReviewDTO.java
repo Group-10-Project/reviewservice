@@ -9,5 +9,7 @@ public class DeleteReviewDTO {
     private String id;//reviewId
 
     public DeleteReviewDTO(String reviewId) {
+        this.id=reviewId;
     }
+
 }

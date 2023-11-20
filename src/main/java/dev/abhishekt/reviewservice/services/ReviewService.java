@@ -22,10 +22,10 @@ public class ReviewService {
     private ReviewRepository reviewRepository;
     @Autowired
     private UserRepository userRepository;
-    public ReviewService(ReviewRepository reviewRepository,UserRepository userRepository){
-        this.reviewRepository = reviewRepository;
-        this.userRepository = userRepository;
-    }
+//    public ReviewService(ReviewRepository reviewRepository,UserRepository userRepository){
+//        this.reviewRepository = reviewRepository;
+//        this.userRepository = userRepository;
+//    }
 
     public ReviewService() {
 
